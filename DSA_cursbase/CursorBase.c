@@ -108,7 +108,8 @@ Student removeStudent(VirtualHeap *vh, List *list, String keyword)
 						   temp = (*trav);
 						   (*trav) = vh->elems[temp].next;
 							retval = newStudent(vh->elems[temp].elem.studID, vh->elems[temp].elem.studName, vh->elems[temp].elem.sex, vh->elems[temp].elem.program); 	
-							deallocSpace(vh, temp);	 retval;	
+							deallocSpace(vh, temp);	 retval;
+						return retval;
 					}
 					else
 					{
@@ -116,7 +117,7 @@ Student removeStudent(VirtualHeap *vh, List *list, String keyword)
 					}
 				}
 	    }
-	    return retval;
+	    
 }
 
 void deallocSpace(VirtualHeap *vh, int index)
